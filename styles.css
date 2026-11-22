@@ -1,4 +1,3 @@
-/* CORES DO SITE */
 :root {
     --rosa-fundo: #f8e5eb;
     --rosa-destaque: #d97998;
@@ -7,7 +6,6 @@
     --branco: #ffffff;
 }
 
-/* CONFIGURAÇÃO GERAL */
 * {
     margin: 0;
     padding: 0;
