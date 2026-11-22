@@ -1,0 +1,126 @@
+/* CORES DO SITE */
+:root {
+    --rosa-fundo: #f8e5eb;
+    --rosa-destaque: #d97998;
+    --creme: #fffaf3;
+    --marrom: #5c3d32;
+    --branco: #ffffff;
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--creme);
+    color: var(--marrom);
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: var(--rosa-fundo);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    color: var(--marrom);
+}
+
+nav a {
+    color: var(--marrom);
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* APRESENTAÇÃO E SOBRE */
+section {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--rosa-destaque);
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* CATEGORIAS DOS PRODUTOS */
+#produtos {
+    background-color: var(--rosa-fundo);
+}
+
+/* Os artigos serão organizados em duas colunas.
+   Assim teremos duas linhas com dois produtos em cada uma. */
+#produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* O título e o texto da seção ocupam as duas colunas */
+#produtos h2,
+#produtos > p {
+    grid-column: 1 / 3;
+}
+
+article {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Quando você adicionar as imagens, elas ficarão dentro do card */
+article img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+article h3 {
+    color: var(--rosa-destaque);
+    margin: 10px;
+}
+
+article a {
+    display: inline-block;
+    background-color: var(--rosa-destaque);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--marrom);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+}
+
+/* EM TELAS PEQUENAS, OS PRODUTOS FICAM UM ABAIXO DO OUTRO */
+@media (max-width: 600px) {
+    #produtos {
+        grid-template-columns: 1fr;
+    }
+
+    #produtos h2,
+    #produtos > p {
+        grid-column: 1;
+    }
+}
