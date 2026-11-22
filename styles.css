@@ -56,8 +56,6 @@ section p {
     background-color: var(--rosa-fundo);
 }
 
-/* Os artigos serão organizados em duas colunas.
-   Assim teremos duas linhas com dois produtos em cada uma. */
 #produtos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -65,7 +63,6 @@ section p {
     padding: 30px;
 }
 
-/* O título e o texto da seção ocupam as duas colunas */
 #produtos h2,
 #produtos > p {
     grid-column: 1 / 3;
